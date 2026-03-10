@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurdUI-old", "BurdUI-old\BurdUI-old.csproj", "{53011106-49B9-4C67-87CF-5ABB1452CAC9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurdUIAvaloniaTest", "AvaloniaApplication1\BurdUIAvaloniaTest\BurdUIAvaloniaTest.csproj", "{B7A72309-ED29-40EB-AE70-0E1CFA6583E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurdUIAvaloniaTest.Desktop", "AvaloniaApplication1\BurdUIAvaloniaTest.Desktop\BurdUIAvaloniaTest.Desktop.csproj", "{7391E723-F174-4491-AF93-74720E979E72}"
@@ -16,10 +14,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{53011106-49B9-4C67-87CF-5ABB1452CAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53011106-49B9-4C67-87CF-5ABB1452CAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53011106-49B9-4C67-87CF-5ABB1452CAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53011106-49B9-4C67-87CF-5ABB1452CAC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7A72309-ED29-40EB-AE70-0E1CFA6583E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B7A72309-ED29-40EB-AE70-0E1CFA6583E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A72309-ED29-40EB-AE70-0E1CFA6583E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
