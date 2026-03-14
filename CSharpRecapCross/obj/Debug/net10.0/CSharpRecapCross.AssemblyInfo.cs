@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSharpRecapCross")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37d6523427bbba26e0953abc5c319dbeb5ea13ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8eb70cd05e4430c461687c095265d200516ab42")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSharpRecapCross")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSharpRecapCross")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

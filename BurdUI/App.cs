@@ -20,6 +20,10 @@ using Avalonia.Input;
 
 public class App : Control
 {
+    // a window in burdUI has max res 2k 
+    private const int MaxWidth = 2560;
+    private const int MaxHeight = 1440;
+    
     private RenderTargetBitmap _bitmap;
     private int _width = 800;
     private int _height = 600;
@@ -30,7 +34,7 @@ public class App : Control
     public App()
     {
         // init BurdUI graphics context
-        var size = new PixelSize(_width, _height);
+        var size = new PixelSize(MaxWidth, MaxHeight);
         var dpi = new Vector(192, 192);
 
         _bitmap = new RenderTargetBitmap(size, dpi);
@@ -55,13 +59,7 @@ public class App : Control
         {
             OnKey(e.Key);
         };
-
-        // override Avalonia image stretching 
-        this.SizeChanged += (s, e) =>
-        {
-            ResizeBitmapIfNeeded();
-            this.InvalidateVisual();
-        };
+        
     }
 
     // ==========================
@@ -99,29 +97,9 @@ public class App : Control
        // passing the result to the Avalonia Window
         ctx.DrawImage(
             _bitmap,
-            sourceRect: new Rect(0, 0, _width, _height),
-            destRect: new Rect(0, 0, Bounds.Width, Bounds.Height));
+            sourceRect: new Rect(0, 0, MaxWidth, MaxHeight),
+            destRect: new Rect(0, 0, MaxWidth, MaxHeight));
     }
 
-    /// <summary>
-    /// Handles the window resize
-    /// </summary>
-    private void ResizeBitmapIfNeeded()
-    {
-        int newW = (int)Math.Max(1, Bounds.Width);
-        int newH = (int)Math.Max(1, Bounds.Height);
-
-        if (newW != _width || newH != _height)
-        {
-            _width = newW;
-            _height = newH;
-
-            var size = new PixelSize(_width, _height);
-            var dpi = new Vector(96, 96);
-
-            _bitmap = new RenderTargetBitmap(size, dpi);
-            burdUIContext.Dispose();
-            burdUIContext = _bitmap.CreateDrawingContext();
-        }
-    }
+    
 }
