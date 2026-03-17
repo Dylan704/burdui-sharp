@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Runtime.InteropServices.JavaScript;
+using System.Xml.Serialization;
 using Avalonia;
 using Avalonia.Media;
 using BurdUI.Utils;
@@ -28,6 +29,8 @@ public class Button : View
     }
     public override void Paint(DrawingContext g, Rect clip)
     {
+        
+        
         using (g.PushClip(new Rect(clip.X, clip.Y,clip.Width,clip.Height)))
         {
             var thickBounds = new Rect(

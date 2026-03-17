@@ -77,7 +77,9 @@ public class View
             foreach (var child in Children)
             {
                 var childClip = child.Bounds.Intersect(localClip);
-                child.Paint(ctx, childClip);
+                if(childClip.Height > 0 && childClip.Width > 0)
+                    // the intersection is not empty
+                    child.Paint(ctx, childClip);
             }
         }    
         // Draw final border rectangle
